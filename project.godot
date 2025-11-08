@@ -1,0 +1,56 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Financial Calculators"
+run/main_scene="uid://b3aa40j4r5cid"
+config/quit_on_go_back=false
+config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+config/icon="uid://cmfw6ygfvpmx0"
+
+[autoload]
+
+SaveLoad="*res://Scripts/save_load.gd"
+
+[display]
+
+window/size/viewport_width=648
+window/size/viewport_height=1152
+window/size/mode=2
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+
+[dotnet]
+
+project/assembly_name="Minor Project"
+
+[file_customization]
+
+folder_colors={
+"res://Fonts/": "pink",
+"res://Scenes/": "blue",
+"res://Scripts/": "purple",
+"res://Scripts/History Scripts/": "gray",
+"res://Textures/": "gray",
+"res://Themes/": "green"
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

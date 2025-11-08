@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://csbrpktbg5jqq"]
+
+[ext_resource type="FontFile" uid="uid://cs1i7cq8djb25" path="res://Fonts/HomeVideo-BLG6G.ttf" id="1_jbxlv"]
+
+[resource]
+default_font = ExtResource("1_jbxlv")
+default_font_size = 50
+VBoxContainer/constants/separation = 50

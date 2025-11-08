@@ -1,0 +1,31 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://6saebiw22wt8"]
+
+[ext_resource type="FontFile" uid="uid://cs1i7cq8djb25" path="res://Fonts/HomeVideo-BLG6G.ttf" id="1_xhc4c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_61s7s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ne5j3"]
+bg_color = Color(0.713726, 0, 0.00392157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 5.0
+shadow_size = 10
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8j77"]
+bg_color = Color(0.259869, 1.20327e-08, 0.000460371, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+
+[resource]
+default_font = ExtResource("1_xhc4c")
+default_font_size = 30
+Button/styles/focus = SubResource("StyleBoxEmpty_61s7s")
+Button/styles/hover = SubResource("StyleBoxFlat_ne5j3")
+Button/styles/normal = SubResource("StyleBoxFlat_ne5j3")
+Button/styles/pressed = SubResource("StyleBoxFlat_o8j77")

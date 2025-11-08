@@ -1,0 +1,1114 @@
+[gd_scene load_steps=22 format=3 uid="uid://cohlc2e8ftkc8"]
+
+[ext_resource type="Script" uid="uid://buo8un5w2gscg" path="res://Scripts/fd_calculator.gd" id="1_0i33e"]
+[ext_resource type="Theme" uid="uid://6dbvh2is3ah1" path="res://Themes/default.tres" id="2_3pqb6"]
+[ext_resource type="Theme" uid="uid://csbrpktbg5jqq" path="res://Themes/heading_fonts.tres" id="2_8li84"]
+[ext_resource type="Theme" uid="uid://cu3b5r8pq8ba1" path="res://Themes/home_button.tres" id="3_o8j77"]
+[ext_resource type="Theme" uid="uid://dogj18rhcwc1m" path="res://Themes/history_button.tres" id="4_0wi0v"]
+[ext_resource type="Theme" uid="uid://cdsvsbygc0eyt" path="res://Themes/small_fonts.tres" id="4_ne5j3"]
+[ext_resource type="Theme" uid="uid://b5dig8unv68n1" path="res://Themes/medium_fonts.tres" id="4_yk0xe"]
+[ext_resource type="Theme" uid="uid://bef4fw3jbydc4" path="res://Themes/green_button.tres" id="7_n3833"]
+[ext_resource type="Theme" uid="uid://6saebiw22wt8" path="res://Themes/red_button.tres" id="8_n3833"]
+[ext_resource type="Script" uid="uid://dch76v1mw5q8c" path="res://Scripts/History Scripts/history_fd.gd" id="10_0wi0v"]
+[ext_resource type="Theme" uid="uid://den1j58qiuue6" path="res://Themes/close_history.tres" id="11_kfr4m"]
+[ext_resource type="Theme" uid="uid://chlxcoc6jg66b" path="res://Themes/clear_history.tres" id="12_m2mt5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pqb6"]
+bg_color = Color(0, 1, 0.258824, 1)
+
+[sub_resource type="Animation" id="Animation_3pqb6"]
+resource_name = "Loading"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Loading_Animations/Loading:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.0196078, -0.25, 0, 0.25, 0, 0.0196078, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Loading_Animations/Loading:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.701961, -0.25, 0, 0.25, 0, 0.701961, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Loading_Animations/Loading:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Loading_Animations/Loading:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_dssrj"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/CompoundI_Window/Main:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1100, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Result_Window:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1100, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Loading_Animations/Loading:color:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.0196078, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Loading_Animations/Loading:color:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.701961, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Loading_Animations/Loading:color:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Loading_Animations/Loading:color:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_0i33e"]
+resource_name = "compoundI_menu"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/CompoundI_Window/Main:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1100, -0.25, 0, 0.25, 0, 401, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_0wi0v"]
+resource_name = "history_down"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/History_Window:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(26, -0.25, 0, 0.25, 0, 1200, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Result_Window:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1100, -0.25, 0, 0.25, 0, 26, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_kfr4m"]
+resource_name = "history_window"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/History_Window:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1100, -0.25, 0, 0.25, 0, 26, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_o8j77"]
+resource_name = "main_menu_loading"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Loading_Animations/MM_Loading:size:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(80, -0.25, 0, 0.25, 0, 648, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Loading_Animations/MM_Loading:size:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(80, -0.25, 0, 0.25, 0, 1152, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Loading_Animations/MM_Loading:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(568, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Loading_Animations/MM_Loading:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Loading_Animations/MM_Loading:theme:Panel/styles/panel:corner_radius_bottom_left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(40, -0.25, 0, 0.25, 0, 40, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_ivayf"]
+resource_name = "open_close_result_menu"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Result_Window:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1100, -0.25, 0, 0.25, 0, 26, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tnwlp"]
+_data = {
+&"Loading": SubResource("Animation_3pqb6"),
+&"RESET": SubResource("Animation_dssrj"),
+&"compoundI_menu": SubResource("Animation_0i33e"),
+&"history_down": SubResource("Animation_0wi0v"),
+&"history_window": SubResource("Animation_kfr4m"),
+&"main_menu_loading": SubResource("Animation_o8j77"),
+&"open_close_result_menu": SubResource("Animation_ivayf")
+}
+
+[node name="FD_Calculator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0i33e")
+metadata/_edit_vertical_guides_ = [-858.0]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background_Color" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0196078, 0.701961, 0, 1)
+
+[node name="Title" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -238.5
+offset_top = 80.0
+offset_right = 238.5
+offset_bottom = 271.0
+grow_horizontal = 2
+theme = ExtResource("2_8li84")
+text = "FD
+Calculator"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main_Menu_Btn" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(80, 80)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_bottom = 80.0
+grow_horizontal = 0
+theme = ExtResource("3_o8j77")
+text = "X"
+
+[node name="History_Btn" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(80, 80)
+offset_right = 80.0
+offset_bottom = 80.0
+theme = ExtResource("4_0wi0v")
+text = "↶"
+
+[node name="IA_Container" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -196.0
+offset_bottom = -196.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Heading" type="RichTextLabel" parent="CanvasLayer/IA_Container"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = -90.0
+offset_right = 259.0
+offset_bottom = -40.0
+grow_horizontal = 2
+theme = ExtResource("2_3pqb6")
+text = "Investment Amount:"
+fit_content = true
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="IA" type="LineEdit" parent="CanvasLayer/IA_Container"]
+custom_minimum_size = Vector2(500, 80)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = -39.0
+offset_right = 258.0
+offset_bottom = 41.0
+grow_horizontal = 2
+theme = ExtResource("2_3pqb6")
+text = "100000.0"
+max_length = 10
+context_menu_enabled = false
+emoji_menu_enabled = false
+clear_button_enabled = true
+drag_and_drop_selection_enabled = false
+caret_blink = true
+
+[node name="IA_Slider" type="HSlider" parent="CanvasLayer/IA_Container"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = 45.0
+offset_right = 250.0
+offset_bottom = 75.0
+grow_vertical = 0
+theme = ExtResource("2_3pqb6")
+min_value = 10000.0
+max_value = 1e+06
+step = 10000.0
+value = 100000.0
+
+[node name="ROI_Container" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Heading" type="RichTextLabel" parent="CanvasLayer/ROI_Container"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = -90.0
+offset_right = 264.0
+offset_bottom = -40.0
+grow_horizontal = 2
+theme = ExtResource("2_3pqb6")
+text = "Rate Of Interest(%):"
+fit_content = true
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="ROI" type="LineEdit" parent="CanvasLayer/ROI_Container"]
+custom_minimum_size = Vector2(500, 80)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = -39.0
+offset_right = 258.0
+offset_bottom = 41.0
+grow_horizontal = 2
+theme = ExtResource("2_3pqb6")
+text = "6.0"
+max_length = 5
+context_menu_enabled = false
+emoji_menu_enabled = false
+clear_button_enabled = true
+drag_and_drop_selection_enabled = false
+caret_blink = true
+
+[node name="ROI_Slider" type="HSlider" parent="CanvasLayer/ROI_Container"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = 45.0
+offset_right = 250.0
+offset_bottom = 75.0
+grow_vertical = 0
+theme = ExtResource("2_3pqb6")
+min_value = 1.0
+max_value = 30.0
+step = 0.5
+value = 6.0
+
+[node name="IY_Container" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 204.0
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Heading" type="RichTextLabel" parent="CanvasLayer/IY_Container"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = -90.0
+offset_right = 261.0
+offset_bottom = -40.0
+grow_horizontal = 2
+theme = ExtResource("2_3pqb6")
+text = "iNVESTMENT Years:"
+fit_content = true
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="IY" type="LineEdit" parent="CanvasLayer/IY_Container"]
+custom_minimum_size = Vector2(500, 80)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = -39.0
+offset_right = 258.0
+offset_bottom = 41.0
+grow_horizontal = 2
+theme = ExtResource("2_3pqb6")
+text = "4.0"
+max_length = 5
+context_menu_enabled = false
+emoji_menu_enabled = false
+clear_button_enabled = true
+drag_and_drop_selection_enabled = false
+caret_blink = true
+
+[node name="IY_Slider" type="HSlider" parent="CanvasLayer/IY_Container"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = 45.0
+offset_right = 250.0
+offset_bottom = 75.0
+grow_vertical = 0
+theme = ExtResource("2_3pqb6")
+min_value = 1.0
+max_value = 20.0
+value = 4.0
+
+[node name="CompoundI_Btn" type="CheckButton" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -191.0
+offset_top = -287.0
+offset_right = 60.0
+offset_bottom = -263.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+theme = ExtResource("4_ne5j3")
+text = "Compound Interest:"
+
+[node name="Calculate_Btn" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(300, 100)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -227.0
+offset_right = 150.0
+offset_bottom = -127.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_3pqb6")
+theme_override_font_sizes/font_size = 50
+text = "Calculate"
+
+[node name="CompoundI_Window" type="Panel" parent="CanvasLayer"]
+visible = false
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main" type="Panel" parent="CanvasLayer/CompoundI_Window"]
+clip_contents = true
+custom_minimum_size = Vector2(500, 350)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -1676.0
+offset_right = 250.0
+offset_bottom = -1326.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_3pqb6")
+
+[node name="TextFor_PP" type="RichTextLabel" parent="CanvasLayer/CompoundI_Window/Main"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 70.0
+offset_right = 178.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme = ExtResource("4_yk0xe")
+text = "Select Interest Type:"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="Interest_PP" type="OptionButton" parent="CanvasLayer/CompoundI_Window/Main"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 150.0
+offset_right = 200.0
+offset_bottom = 210.0
+grow_horizontal = 2
+theme = ExtResource("4_yk0xe")
+selected = 0
+item_count = 4
+popup/item_0/text = "Yearly"
+popup/item_0/id = 1
+popup/item_1/text = "Half Yearly"
+popup/item_1/id = 2
+popup/item_2/text = "Quarterly"
+popup/item_2/id = 4
+popup/item_3/text = "Monthly"
+popup/item_3/id = 12
+
+[node name="Ok_Btn" type="Button" parent="CanvasLayer/CompoundI_Window/Main"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -100.0
+offset_right = -20.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("7_n3833")
+text = "Ok"
+
+[node name="Cancel_Btn" type="Button" parent="CanvasLayer/CompoundI_Window/Main"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -100.0
+offset_right = 195.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("8_n3833")
+theme_type_variation = &"FlatButton"
+text = "Cancel
+"
+
+[node name="Blur_Window" type="Panel" parent="CanvasLayer"]
+visible = false
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Result_Window" type="Panel" parent="CanvasLayer"]
+visible = false
+custom_minimum_size = Vector2(600, 1100)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -1100.0
+offset_right = -24.0
+offset_bottom = -1152.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(300, 550)
+theme = ExtResource("2_3pqb6")
+
+[node name="B_Title" type="RichTextLabel" parent="CanvasLayer/Result_Window"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -177.0
+offset_top = 100.0
+offset_right = 177.0
+offset_bottom = 206.0
+grow_horizontal = 2
+theme = ExtResource("2_8li84")
+text = "Breakdown:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Result_Window"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -255.0
+offset_top = -270.0
+offset_right = 255.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_scroll_mode = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Result_Window/ScrollContainer"]
+custom_minimum_size = Vector2(510, 351)
+layout_mode = 2
+
+[node name="Breakdown_C" type="GridContainer" parent="CanvasLayer/Result_Window/ScrollContainer/CenterContainer"]
+z_as_relative = false
+layout_mode = 2
+theme = ExtResource("2_3pqb6")
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="PA" type="RichTextLabel" parent="CanvasLayer/Result_Window/ScrollContainer/CenterContainer/Breakdown_C"]
+custom_minimum_size = Vector2(245, 50)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_yk0xe")
+text = "Invested Amount: "
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="PA_Value" type="RichTextLabel" parent="CanvasLayer/Result_Window/ScrollContainer/CenterContainer/Breakdown_C"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_yk0xe")
+text = "10000
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="IT" type="RichTextLabel" parent="CanvasLayer/Result_Window/ScrollContainer/CenterContainer/Breakdown_C"]
+custom_minimum_size = Vector2(245, 50)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_yk0xe")
+text = "Interest Type: "
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="IT_Value" type="RichTextLabel" parent="CanvasLayer/Result_Window/ScrollContainer/CenterContainer/Breakdown_C"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_yk0xe")
+text = "Simple
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TI" type="RichTextLabel" parent="CanvasLayer/Result_Window/ScrollContainer/CenterContainer/Breakdown_C"]
+custom_minimum_size = Vector2(245, 50)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_yk0xe")
+text = "Total Profit: "
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="TI_Value" type="RichTextLabel" parent="CanvasLayer/Result_Window/ScrollContainer/CenterContainer/Breakdown_C"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_yk0xe")
+text = "10000
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TA" type="RichTextLabel" parent="CanvasLayer/Result_Window/ScrollContainer/CenterContainer/Breakdown_C"]
+custom_minimum_size = Vector2(245, 50)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_yk0xe")
+text = "Total Amount: "
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="TA_Value" type="RichTextLabel" parent="CanvasLayer/Result_Window/ScrollContainer/CenterContainer/Breakdown_C"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_yk0xe")
+text = "10000
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Chart_GUI" type="Control" parent="CanvasLayer/Result_Window"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -400.0
+offset_bottom = -400.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Chart" type="ProgressBar" parent="CanvasLayer/Result_Window/Chart_GUI"]
+custom_minimum_size = Vector2(250, 20)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -10.0
+offset_right = 125.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_3pqb6")
+value = 50.0
+fill_mode = 1
+show_percentage = false
+
+[node name="AV" type="RichTextLabel" parent="CanvasLayer/Result_Window/Chart_GUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -17.0
+offset_right = -150.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_yk0xe")
+text = "0%"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 1
+justification_flags = 161
+
+[node name="IV" type="RichTextLabel" parent="CanvasLayer/Result_Window/Chart_GUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 150.0
+offset_top = -17.0
+offset_right = 250.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_yk0xe")
+text = "0%"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+vertical_alignment = 1
+justification_flags = 161
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Result_Window/Chart_GUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 20.0
+offset_right = 150.0
+offset_bottom = 70.0
+grow_horizontal = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Result_Window/Chart_GUI/ScrollContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+
+[node name="Profit" type="RichTextLabel" parent="CanvasLayer/Result_Window/Chart_GUI/ScrollContainer/CenterContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_yk0xe")
+theme_override_colors/default_color = Color(0, 1, 0.258824, 1)
+text = "0%"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 161
+
+[node name="Close_Btn" type="Button" parent="CanvasLayer/Result_Window"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.5
+offset_top = -250.0
+offset_right = 112.5
+offset_bottom = -170.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_yk0xe")
+text = "Close"
+
+[node name="History_Window" type="Panel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 26.0
+offset_right = -24.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_3pqb6")
+script = ExtResource("10_0wi0v")
+
+[node name="Title" type="RichTextLabel" parent="CanvasLayer/History_Window"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -177.0
+offset_top = 25.0
+offset_right = 177.0
+offset_bottom = 131.0
+grow_horizontal = 2
+theme = ExtResource("2_8li84")
+text = "History"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close_Btn" type="Button" parent="CanvasLayer/History_Window"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_bottom = 80.0
+grow_horizontal = 0
+theme = ExtResource("11_kfr4m")
+text = "X"
+
+[node name="Clear_Btn" type="Button" parent="CanvasLayer/History_Window"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+offset_right = 80.0
+offset_bottom = 80.0
+theme = ExtResource("12_m2mt5")
+text = "C"
+
+[node name="No_History_Text" type="RichTextLabel" parent="CanvasLayer/History_Window"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -30.0
+offset_right = 110.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_yk0xe")
+text = "No History"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="History_Scroll" type="ScrollContainer" parent="CanvasLayer/History_Window"]
+custom_minimum_size = Vector2(550, 900)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -275.0
+offset_top = 150.0
+offset_right = 275.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="History_Box" type="VBoxContainer" parent="CanvasLayer/History_Window/History_Scroll"]
+custom_minimum_size = Vector2(550, 900)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("2_3pqb6")
+
+[node name="Loading_Animations" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Loading" type="ColorRect" parent="CanvasLayer/Loading_Animations"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0196078, 0.701961, 0, 1)
+
+[node name="MM_Loading" type="Panel" parent="CanvasLayer/Loading_Animations"]
+visible = false
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_bottom = 80.0
+grow_horizontal = 0
+theme = ExtResource("3_o8j77")
+
+[node name="Animations" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_tnwlp")
+}
+
+[node name="Result_Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="CompndI_Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Loading_Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="History_Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="History_Timer2" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="pressed" from="CanvasLayer/Main_Menu_Btn" to="." method="_on_main_menu_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/History_Btn" to="." method="_on_history_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/History_Btn" to="CanvasLayer/History_Window" method="_on_history_btn_pressed"]
+[connection signal="editing_toggled" from="CanvasLayer/IA_Container/IA" to="." method="_on_ia_editing_toggled"]
+[connection signal="text_changed" from="CanvasLayer/IA_Container/IA" to="." method="_on_ia_text_changed"]
+[connection signal="drag_ended" from="CanvasLayer/IA_Container/IA_Slider" to="." method="_on_ia_slider_drag_ended"]
+[connection signal="drag_started" from="CanvasLayer/IA_Container/IA_Slider" to="." method="_on_ia_slider_drag_started"]
+[connection signal="editing_toggled" from="CanvasLayer/ROI_Container/ROI" to="." method="_on_roi_editing_toggled"]
+[connection signal="text_changed" from="CanvasLayer/ROI_Container/ROI" to="." method="_on_roi_text_changed"]
+[connection signal="drag_ended" from="CanvasLayer/ROI_Container/ROI_Slider" to="." method="_on_roi_slider_drag_ended"]
+[connection signal="drag_started" from="CanvasLayer/ROI_Container/ROI_Slider" to="." method="_on_roi_slider_drag_started"]
+[connection signal="editing_toggled" from="CanvasLayer/IY_Container/IY" to="." method="_on_iy_editing_toggled"]
+[connection signal="text_changed" from="CanvasLayer/IY_Container/IY" to="." method="_on_iy_text_changed"]
+[connection signal="drag_ended" from="CanvasLayer/IY_Container/IY_Slider" to="." method="_on_iy_slider_drag_ended"]
+[connection signal="drag_started" from="CanvasLayer/IY_Container/IY_Slider" to="." method="_on_iy_slider_drag_started"]
+[connection signal="toggled" from="CanvasLayer/CompoundI_Btn" to="." method="_on_compound_i_btn_toggled"]
+[connection signal="pressed" from="CanvasLayer/Calculate_Btn" to="." method="_on_calculate_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/Calculate_Btn" to="CanvasLayer/History_Window" method="_on_calculate_btn_pressed"]
+[connection signal="item_selected" from="CanvasLayer/CompoundI_Window/Main/Interest_PP" to="." method="_on_interest_pp_item_selected"]
+[connection signal="pressed" from="CanvasLayer/CompoundI_Window/Main/Ok_Btn" to="." method="_on_ok_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/CompoundI_Window/Main/Cancel_Btn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/Result_Window/Close_Btn" to="." method="_on_close_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/History_Window/Close_Btn" to="CanvasLayer/History_Window" method="_on_close_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/History_Window/Clear_Btn" to="CanvasLayer/History_Window" method="_on_clear_btn_pressed"]
+[connection signal="timeout" from="Result_Timer" to="." method="_on_result_timer_timeout"]
+[connection signal="timeout" from="CompndI_Timer" to="." method="_on_compnd_i_timer_timeout"]
+[connection signal="timeout" from="Loading_Timer" to="." method="_on_loading_timer_timeout"]
+[connection signal="timeout" from="History_Timer" to="CanvasLayer/History_Window" method="_on_history_timer_timeout"]
+[connection signal="timeout" from="History_Timer2" to="." method="_on_history_timer_2_timeout"]
