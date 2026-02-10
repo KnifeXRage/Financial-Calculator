@@ -16,13 +16,13 @@
 ## Videos:
 
 ### Smooth Animations:
-![Smooth Transition Animations](Demos/Videos/Smooth%20Transition%20Animations.mp4)
+https://github.com/user-attachments/assets/d2e8f70e-8378-4d54-9b54-945fa64d02f9
 
 ### History System:
-![History System](Demos/Videos/History%20System.mp4)
+https://github.com/user-attachments/assets/88bdefe2-8e6d-4f1b-b0c4-853de0ed5096
 
 ### EMI Calculation Preview:
-![EMI Calculation Preview](Demos/Videos/EMI%20Calculation%20Preview.mp4)
+https://github.com/user-attachments/assets/1852fd9c-a7eb-4af3-a40f-3d0e2010aeee
 
 ## Working of App:
 > Here is a Simple Flowchart that Shows how this App work:
